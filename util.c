@@ -303,7 +303,7 @@ get_num_sample_counts(const GLenum target,
    test_data_execute(local_data, target, internalformat,
                      GL_NUM_SAMPLE_COUNTS);
 
-   if (!check_gl_error())
+   if (check_gl_error())
       result = -1;
    else
       result = test_data_value_at_index(local_data, 0);
